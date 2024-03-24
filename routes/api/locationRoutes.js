@@ -1,11 +1,9 @@
 const router = require('express').Router();
-const { Location, Traveller, Trips } = require('../../models');
+const { Location, Traveller, Trip } = require('../../models');
 
 router.get('/', async (req, res) => {
   try {
-    const locationData = await Location.findAll({
-      include: [{ model: Trips }, { model: Traveller }],
-    });
+    const locationData = await Location.findAll();
     res.status(200).json(locationData);
   } catch (err) {
     res.status(500).json(err);
@@ -24,7 +22,7 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const locationData = await Location.findByPk(req.params.id, {
-      include: [{ model: Trips }, { model: Traveller }],
+      include: [{ model: Traveller, through: Trip, as: 'location_travellers' }],
     });
     if (!locationData) {
       res.status(404).json({ message: 'No location found with that id!' });
@@ -35,7 +33,6 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 router.delete('/:id', async (req, res) => {
   try {
@@ -53,6 +50,5 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 module.exports = router;
