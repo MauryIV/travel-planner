@@ -35,7 +35,10 @@ Would be a great base to expand upon for making a travel database with a UI.
 
 <a id="Visuals"></a>
 ## Visuals
-NA
+![Screenshot 2024-03-25 at 12 41 31 PM](https://github.com/MauryIV/travel-planner/assets/146037880/9845cb7d-7dc5-4e99-8ede-3666bafb7a12)
+![Screenshot 2024-03-25 at 12 41 45 PM](https://github.com/MauryIV/travel-planner/assets/146037880/318253e0-9b30-4273-ada8-24fda3b4f5e5)
+![Screenshot 2024-03-25 at 12 41 56 PM](https://github.com/MauryIV/travel-planner/assets/146037880/945af672-8fe5-4b14-8127-d18e35b31db9)
+![Screenshot 2024-03-25 at 12 42 11 PM](https://github.com/MauryIV/travel-planner/assets/146037880/0cc69f7c-0b32-4968-89c8-ffae32abbe56)
 
 <a id="tests"></a>
 ## Tests
